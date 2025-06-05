@@ -1,4 +1,4 @@
-Select-Skip 🗑️
+Select-Skip 
 A modern, user-friendly web page built with React and Tailwind CSS as a redesign of the "Choose Your Skip Size" page from https://wewantwaste.co.uk/. This project was created as part of a coding challenge to enhance the original page's interface while maintaining its core functionality of displaying skip options based on API data.
 Table of Contents
 
