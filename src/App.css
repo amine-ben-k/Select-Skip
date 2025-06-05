@@ -1,0 +1,290 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .app-container {
+    @apply min-h-screen bg-gradient-to-br from-navy to-[#1A3657] text-white font-['Inter'] relative pb-16;
+  }
+
+  .main-content {
+    @apply max-w-[100%] w-full mx-auto px-8 lg:px-12;
+  }
+
+  .header {
+    @apply text-center mb-16;
+  }
+
+  .page-title {
+    @apply text-4xl font-bold text-white mb-4 shadow-lg;
+  }
+
+  .page-subtitle {
+    @apply text-xl font-light text-blue-200;
+  }
+
+  .step-indicator-container {
+    @apply flex flex-row items-center justify-center w-full px-4 py-3 mb-12 bg-white/5 rounded-xl glassmorphism overflow-x-auto;
+  }
+
+  .step-item {
+    @apply flex flex-row items-center relative mr-6 last:mr-0;
+  }
+
+  .step-icon {
+    @apply w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full text-blue-200 transition-all duration-300;
+  }
+
+  .step-icon.active {
+    @apply bg-teal-500 text-white shadow-lg shadow-teal-500/50;
+  }
+
+  .step-icon.completed {
+    @apply bg-indigo-600 text-white;
+  }
+
+  .step-connector {
+    @apply h-px w-8 bg-gradient-to-r from-indigo-600 to-teal-500 mx-2;
+  }
+
+  .step-label {
+    @apply text-sm ml-2 text-center;
+  }
+
+  .skip-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-20 gap-y-12 pb-32;
+  }
+
+  .skip-card {
+    @apply bg-white/10 glassmorphism rounded-2xl p-12 text-center transition-all duration-300 border border-white/10 min-w-[360px];
+  }
+
+  .skip-card:hover {
+    @apply -translate-y-3 shadow-xl;
+  }
+
+  .skip-card.selected {
+    @apply animate-glow;
+  }
+
+  .skip-image-container {
+    @apply relative mb-6;
+  }
+
+  .skip-image {
+    @apply w-full h-auto object-contain rounded-xl;
+  }
+
+  .skip-badge {
+    @apply absolute top-2 right-2 bg-gradient-to-r from-teal-500 to-teal-300 text-navy font-semibold text-base px-4 py-1 rounded-full;
+  }
+
+  .skip-title {
+    @apply text-2xl font-semibold text-white mb-2;
+  }
+
+  .skip-hire-period {
+    @apply text-base text-blue-200 mb-3;
+  }
+
+  .skip-price {
+    @apply text-4xl font-bold text-gold-500 mb-4;
+  }
+
+  .skip-tags {
+    @apply flex flex-row justify-center gap-2 mb-6 flex-wrap;
+  }
+
+  .tag {
+    @apply text-sm px-4 py-1 rounded-2xl font-medium;
+  }
+
+  .tag-success {
+    @apply bg-green-400/20 text-green-400;
+  }
+
+  .tag-error {
+    @apply bg-red-400/20 text-red-400;
+  }
+
+  .skip-button {
+    @apply bg-indigo-600 text-white font-semibold px-8 py-5 rounded-xl transition-colors w-full;
+  }
+
+  .skip-button:hover {
+    @apply bg-indigo-700;
+  }
+
+  .skip-button.selected-button {
+    @apply bg-teal-500;
+  }
+
+  .selection-message {
+    @apply fixed bottom-0 left-0 right-0 bg-navy/90 glassmorphism border-t border-teal-500/30 z-20 p-6;
+  }
+
+  .message-content {
+    @apply max-w-[100%] w-full mx-auto px-8 lg:px-12;
+  }
+
+  .message-disclaimer {
+    @apply text-sm text-blue-200 mb-5;
+  }
+
+  .message-details {
+    @apply flex justify-between items-center flex-wrap gap-6;
+  }
+
+  .message-info {
+    @apply text-lg font-medium text-white;
+  }
+
+  .message-actions {
+    @apply flex gap-6;
+  }
+
+  .message-button {
+    @apply flex items-center gap-3 px-8 py-3 rounded-xl font-medium transition-colors;
+  }
+
+  .message-button-secondary {
+    @apply bg-gray-600 text-white;
+  }
+
+  .message-button-secondary:hover {
+    @apply bg-gray-700;
+  }
+
+  .message-button-primary {
+    @apply bg-teal-500 text-white;
+  }
+
+  .message-button-primary:hover {
+    @apply bg-teal-300;
+  }
+
+  .loading {
+    @apply text-center py-16 text-blue-200 text-xl;
+  }
+
+  .error {
+    @apply text-center py-16 text-red-400 text-xl;
+  }
+}
+
+@layer utilities {
+  .glassmorphism {
+    @apply backdrop-blur-md;
+  }
+
+  .animate-glow {
+    @apply animate-[glow_1.5s_ease-in-out_infinite_alternate];
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #38B2AC, 0 0 10px #38B2AC;
+  }
+  to {
+    box-shadow: 0 0 10px #38B2AC, 0 0 20px #38B2AC;
+  }
+}
+
+@media (max-width: 768px) {
+  .step-indicator-container {
+    @apply flex-row px-3 py-2 mb-8;
+  }
+
+  .step-item {
+    @apply flex-row items-center mr-4 last:mr-0;
+  }
+
+  .step-connector {
+    @apply h-px w-4 mx-2;
+  }
+
+  .step-label {
+    @apply text-xs ml-2;
+  }
+
+  .page-title {
+    @apply text-4xl;
+  }
+
+  .page-subtitle {
+    @apply text-lg;
+  }
+
+  .skip-grid {
+    @apply gap-x-8 gap-y-6 pb-40;
+  }
+
+  .skip-card {
+    @apply p-8 min-w-[280px];
+  }
+
+  .skip-image-container {
+    @apply mb-4;
+  }
+
+  .skip-image {
+    @apply rounded-lg;
+  }
+
+  .skip-badge {
+    @apply top-1 right-1 text-sm px-3 py-1;
+  }
+
+  .skip-title {
+    @apply text-xl mb-1;
+  }
+
+  .skip-hire-period {
+    @apply text-sm mb-2;
+  }
+
+  .skip-price {
+    @apply text-3xl mb-3;
+  }
+
+  .skip-tags {
+    @apply gap-1 mb-4;
+  }
+
+  .tag {
+    @apply text-xs px-3 py-1;
+  }
+
+  .skip-button {
+    @apply px-6 py-3 rounded-lg;
+  }
+
+  .selection-message {
+    @apply p-4;
+  }
+
+  .message-content {
+    @apply px-4;
+  }
+
+  .message-disclaimer {
+    @apply text-xs mb-3;
+  }
+
+  .message-details {
+    @apply flex-col gap-4;
+  }
+
+  .message-info {
+    @apply text-base;
+  }
+
+  .message-actions {
+    @apply flex-col w-full gap-3;
+  }
+
+  .message-button {
+    @apply px-6 py-2 rounded-lg gap-2 w-full justify-center;
+  }
+}
