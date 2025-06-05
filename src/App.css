@@ -1,74 +1,71 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
   .app-container {
-    @apply min-h-screen bg-gradient-to-br from-navy to-[#1A3657] text-white font-['Inter'] relative pb-16;
+    @apply min-h-screen bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white font-['Inter'] relative;
   }
 
   .main-content {
-    @apply max-w-[100%] w-full mx-auto px-8 lg:px-12;
+    @apply max-w-screen-xl mx-auto px-6 md:px-12 pt-10 pb-32;
   }
 
   .header {
-    @apply text-center mb-16;
+    @apply text-center mb-12;
   }
 
   .page-title {
-    @apply text-4xl font-bold text-white mb-4 shadow-lg;
+    @apply text-4xl md:text-5xl font-bold text-white mb-2 leading-tight;
   }
 
   .page-subtitle {
-    @apply text-xl font-light text-blue-200;
+    @apply text-lg md:text-xl text-blue-200 font-light;
   }
 
   .step-indicator-container {
-    @apply flex flex-row items-center justify-center w-full px-4 py-3 mb-12 bg-white/5 rounded-xl glassmorphism overflow-x-auto;
+    @apply flex items-center justify-center gap-4 flex-wrap bg-white/5 py-4 px-6 rounded-xl mb-12 glassmorphism shadow-md;
   }
 
   .step-item {
-    @apply flex flex-row items-center relative mr-6 last:mr-0;
+    @apply flex items-center gap-2 relative;
   }
 
   .step-icon {
-    @apply w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full text-blue-200 transition-all duration-300;
+    @apply w-10 h-10 flex items-center justify-center rounded-full bg-gray-600 text-white;
   }
 
   .step-icon.active {
-    @apply bg-teal-500 text-white shadow-lg shadow-teal-500/50;
+    @apply bg-teal-500 shadow-lg;
   }
 
   .step-icon.completed {
-    @apply bg-indigo-600 text-white;
+    @apply bg-indigo-600;
   }
 
   .step-connector {
-    @apply h-px w-8 bg-gradient-to-r from-indigo-600 to-teal-500 mx-2;
+    @apply w-6 h-1 bg-gradient-to-r from-indigo-600 to-teal-500;
   }
 
   .step-label {
-    @apply text-sm ml-2 text-center;
+    @apply text-xs md:text-sm mt-1 text-center;
   }
 
   .skip-grid {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-20 gap-y-12 pb-32;
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10;
   }
 
   .skip-card {
-    @apply bg-white/10 glassmorphism rounded-2xl p-12 text-center transition-all duration-300 border border-white/10 min-w-[360px];
-  }
-
-  .skip-card:hover {
-    @apply -translate-y-3 shadow-xl;
+    @apply bg-white/10 backdrop-blur-xl p-6 rounded-2xl text-center shadow-md hover:-translate-y-2 transition-transform duration-300 border border-white/10 relative;
   }
 
   .skip-card.selected {
-    @apply animate-glow;
+    @apply ring-4 ring-teal-500/40 animate-glow;
   }
 
   .skip-image-container {
-    @apply relative mb-6;
+    @apply mb-4;
   }
 
   .skip-image {
@@ -76,105 +73,106 @@
   }
 
   .skip-badge {
-    @apply absolute top-2 right-2 bg-gradient-to-r from-teal-500 to-teal-300 text-navy font-semibold text-base px-4 py-1 rounded-full;
+    @apply absolute top-3 right-3 text-xs px-3 py-1 rounded-full bg-teal-400 text-navy font-semibold;
   }
 
   .skip-title {
-    @apply text-2xl font-semibold text-white mb-2;
+    @apply text-xl font-semibold text-white mb-1;
   }
 
   .skip-hire-period {
-    @apply text-base text-blue-200 mb-3;
+    @apply text-sm text-blue-200 mb-2;
   }
 
   .skip-price {
-    @apply text-4xl font-bold text-gold-500 mb-4;
+    @apply text-3xl font-bold text-gold-500 mb-4;
   }
 
   .skip-tags {
-    @apply flex flex-row justify-center gap-2 mb-6 flex-wrap;
+    @apply flex justify-center gap-2 mb-4 flex-wrap;
   }
 
   .tag {
-    @apply text-sm px-4 py-1 rounded-2xl font-medium;
+    @apply text-xs px-3 py-1 rounded-full font-medium;
   }
 
   .tag-success {
-    @apply bg-green-400/20 text-green-400;
+    @apply bg-green-500/20 text-green-400;
   }
 
   .tag-error {
-    @apply bg-red-400/20 text-red-400;
+    @apply bg-red-500/20 text-red-400;
   }
 
   .skip-button {
-    @apply bg-indigo-600 text-white font-semibold px-8 py-5 rounded-xl transition-colors w-full;
+    @apply mt-2 w-full py-3 rounded-xl text-white font-semibold transition-all duration-200;
   }
 
   .skip-button:hover {
-    @apply bg-indigo-700;
+    @apply opacity-90;
   }
 
   .skip-button.selected-button {
     @apply bg-teal-500;
   }
 
+  .skip-button:not(.selected-button) {
+    @apply bg-indigo-600;
+  }
+
   .selection-message {
-    @apply fixed bottom-0 left-0 right-0 bg-navy/90 glassmorphism border-t border-teal-500/30 z-20 p-6;
+    @apply fixed bottom-0 left-0 right-0 bg-navy/90 glassmorphism border-t border-teal-500/30 z-30 px-6 py-4;
   }
 
   .message-content {
-    @apply max-w-[100%] w-full mx-auto px-8 lg:px-12;
+    @apply max-w-screen-xl mx-auto;
   }
 
   .message-disclaimer {
-    @apply text-sm text-blue-200 mb-5;
+    @apply text-xs text-blue-200 mb-3;
   }
 
   .message-details {
-    @apply flex justify-between items-center flex-wrap gap-6;
+    @apply flex flex-col md:flex-row justify-between items-center gap-4;
   }
 
   .message-info {
-    @apply text-lg font-medium text-white;
+    @apply text-base md:text-lg font-medium text-white;
   }
 
   .message-actions {
-    @apply flex gap-6;
+    @apply flex gap-4;
   }
 
   .message-button {
-    @apply flex items-center gap-3 px-8 py-3 rounded-xl font-medium transition-colors;
+    @apply flex items-center gap-2 px-6 py-2 rounded-xl font-medium transition-colors;
   }
 
   .message-button-secondary {
-    @apply bg-gray-600 text-white;
-  }
-
-  .message-button-secondary:hover {
-    @apply bg-gray-700;
+    @apply bg-gray-600 text-white hover:bg-gray-700;
   }
 
   .message-button-primary {
-    @apply bg-teal-500 text-white;
+    @apply bg-teal-500 text-white hover:bg-teal-400;
   }
 
-  .message-button-primary:hover {
-    @apply bg-teal-300;
+  .loading,
+  .error {
+    @apply text-center py-16 text-xl;
   }
 
   .loading {
-    @apply text-center py-16 text-blue-200 text-xl;
+    @apply text-blue-200;
   }
 
   .error {
-    @apply text-center py-16 text-red-400 text-xl;
+    @apply text-red-400;
   }
 }
 
 @layer utilities {
   .glassmorphism {
-    @apply backdrop-blur-md;
+    @apply backdrop-blur-lg bg-white/5;
   }
 
   .animate-glow {
@@ -183,108 +181,10 @@
 }
 
 @keyframes glow {
-  from {
-    box-shadow: 0 0 5px #38B2AC, 0 0 10px #38B2AC;
+  0% {
+    box-shadow: 0 0 10px 2px rgba(94, 234, 212, 0.4);
   }
-  to {
-    box-shadow: 0 0 10px #38B2AC, 0 0 20px #38B2AC;
+  100% {
+    box-shadow: 0 0 20px 6px rgba(94, 234, 212, 0.6);
   }
-}
-
-@media (max-width: 768px) {
-  .step-indicator-container {
-    @apply flex-row px-3 py-2 mb-8;
-  }
-
-  .step-item {
-    @apply flex-row items-center mr-4 last:mr-0;
-  }
-
-  .step-connector {
-    @apply h-px w-4 mx-2;
-  }
-
-  .step-label {
-    @apply text-xs ml-2;
-  }
-
-  .page-title {
-    @apply text-4xl;
-  }
-
-  .page-subtitle {
-    @apply text-lg;
-  }
-
-  .skip-grid {
-    @apply gap-x-8 gap-y-6 pb-40;
-  }
-
-  .skip-card {
-    @apply p-8 min-w-[280px];
-  }
-
-  .skip-image-container {
-    @apply mb-4;
-  }
-
-  .skip-image {
-    @apply rounded-lg;
-  }
-
-  .skip-badge {
-    @apply top-1 right-1 text-sm px-3 py-1;
-  }
-
-  .skip-title {
-    @apply text-xl mb-1;
-  }
-
-  .skip-hire-period {
-    @apply text-sm mb-2;
-  }
-
-  .skip-price {
-    @apply text-3xl mb-3;
-  }
-
-  .skip-tags {
-    @apply gap-1 mb-4;
-  }
-
-  .tag {
-    @apply text-xs px-3 py-1;
-  }
-
-  .skip-button {
-    @apply px-6 py-3 rounded-lg;
-  }
-
-  .selection-message {
-    @apply p-4;
-  }
-
-  .message-content {
-    @apply px-4;
-  }
-
-  .message-disclaimer {
-    @apply text-xs mb-3;
-  }
-
-  .message-details {
-    @apply flex-col gap-4;
-  }
-
-  .message-info {
-    @apply text-base;
-  }
-
-  .message-actions {
-    @apply flex-col w-full gap-3;
-  }
-
-  .message-button {
-    @apply px-6 py-2 rounded-lg gap-2 w-full justify-center;
-  }
-}
+} 
