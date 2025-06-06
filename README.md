@@ -40,8 +40,7 @@ It fetches real-time skip data from an API and presents it using an intuitive la
 - 📌 **Sticky Confirmation** – Selected skip details shown in a sticky footer.
 - 🎨 **Modern Design** – Glassmorphic UI with Tailwind CSS and gradient backgrounds.
 - 📱 **Responsive Layout** – Optimized for all screen sizes with scrollable step indicator on mobile.
-- 🧠 **Custom Title** – Updates browser tab to `Skip Selection - Waste Management`.
-
+  
 ---
 
 ## 🛠️ Technologies Used
