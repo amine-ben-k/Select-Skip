@@ -72,7 +72,14 @@ To run this project locally, follow these steps:
 ## 💡 Usage
 
 ### 1. Open the Website
-- Navigate to [http://localhost:5173](http://localhost:5173) after starting the development server.
+You can view the project in two ways:
+
+- 🖥️ **Live (via CodeSandbox):**  
+  [https://7p8lhg-5173.csb.app](https://7p8lhg-5173.csb.app)
+
+- 💻 **Local Development:**  
+  After running the development server, open:  
+  [http://localhost:5173](http://localhost:5173)
 
 ### 2. Select a Skip
 - View the **step indicator** at the top.
