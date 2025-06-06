@@ -20,6 +20,15 @@ This project was created as part of a coding challenge to enhance the original p
 
 **Select-Skip** reimagines the skip selection process from the We Want Waste website, focusing on a **clean**, **responsive**, and **modern** design.  
 It fetches real-time skip data from an API and presents it using an intuitive layout. This redesign emphasizes **maintainable React code**, **enhanced UI/UX**, and **full responsiveness** for both desktop and mobile users.
+### 🖼️ Screenshots
+
+**Default Skip Selection View:**
+
+![Skip Selection Page](./screenshots/selectSkip1.png)
+
+**After Selecting a Skip (Sticky Footer Appears):**
+
+![Selected Skip Preview](./screenshots/selectSkip2.png)
 
 ---
 
